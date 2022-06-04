@@ -48,7 +48,13 @@ class UploadView(APIView):
 
 class SignInView(APIView):
     def post(self, request, format = None):
-      return Response({'code': 1, 'msg': 'success'}, status=status.HTTP_200_OK)
+      matched_users = User.objects.filter(email = request.data['email'])
+
+      if matched_users.count() > 0:
+        return Response({'code': 1, 'msg': 'success'}, status=status.HTTP_200_OK)
+      else:
+        return Response({'code': 0, 'msg': 'Email or password not match'}, status=status.HTTP_200_OK)
+
 
 class SignOutView(APIView):
     def post(self, request, format = None):

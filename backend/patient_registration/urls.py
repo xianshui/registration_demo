@@ -20,7 +20,6 @@ from patient_registration import views
 
 router = routers.DefaultRouter()
 router.register(r'patients', views.PatientViewSet)
-router.register(r'appointments', views.AppointmentViewSet)
 
 urlpatterns = [
     path('register', views.RegisterView.as_view()),
@@ -28,5 +27,4 @@ urlpatterns = [
     path('signin', views.SignInView.as_view()),
     path('signout', views.SignOutView.as_view()),
     path('', include(router.urls)),
-    path('admin/', admin.site.urls),
 ]
