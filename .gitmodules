@@ -1,0 +1,6 @@
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/xianshui/registration_demo_frontend
+[submodule "fontend"]
+	path = fontend
+	url = https://github.com/xianshui/registration_demo_frontend
