@@ -2,6 +2,8 @@
 
 A patient registration system demo developed with Django and React.js
 
+#Access url: https://patient-registration-demo.herokuapp.com/
+
 
 ## Screenshots
 
